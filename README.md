@@ -5,9 +5,12 @@ Include this script file in your html.
 <script src="dbhandler.js"></script>
 
 Create Database:
+    
     DBHandler.initDatabase();
 
 Create a table:
+
+
     DBHandler.isExists("user", function(result){
        if( parseInt(result.rows.item(0).count) == 0 ){
             DBHandler.createTable("user","sid INTEGER primary key, name TEXT, created_date TIMESTAMP", function (result) {
@@ -17,9 +20,12 @@ Create a table:
     });
 
 Insert New Record:
+
+
     var currentDate = Date.today().getTime();
     var columns = ["sid", "name", "created_date"];
     var values = [1 , "John", currentDate];
+    
     DBHandler.newRecord("user", columns, values, function (result) {
         console.log(result.insertId+"rows affected"+result.rowsAffected);
         if(result.rowsAffected){
