@@ -1,6 +1,9 @@
 # cordova-sqlite-wrapper
 Wrapper(Middleware) for websql DB transactions.  Works well with Cordova sqlite plugin 'https://github.com/brodysoft/Cordova-SQLitePlugin'
 
+Installation using bower:<br/>
+bower info websql-helper
+
 Include this script file in your html.
 <script src="dbhandler.js"></script>
 
